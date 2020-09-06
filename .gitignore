@@ -616,3 +616,5 @@ $RECYCLE.BIN/
 .idea/modules.xml
 .idea/vcs.xml
 .vscode/
+
+rough.py
