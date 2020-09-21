@@ -10,8 +10,6 @@ def multipication(a,b):
 def division(a,b):
     return a/b
 
-
-
 while True:
     print("--------------------------------")
     print("Enter the numbers:-")
