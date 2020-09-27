@@ -35,7 +35,4 @@ if result != -1:
 else:
     print ("Element is not present in array")
 '''
-print("Enter the size of Array : ", end = " ")
-x = int(input())
-print("Enter the Elements of Array : ", end = " ")
-arr = int(input(end = " "))
+#TODO complete this shit
