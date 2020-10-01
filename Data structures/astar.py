@@ -13,7 +13,7 @@ class Node():
         return self.position == other.position
 
 
-def astar(maze, start, end):
+def astatr(maze, start, end):
     """Returns a list of tuples as a path from the given start to the given end in the given maze"""
 
     # Create start and end node
@@ -112,7 +112,7 @@ def main():
     start = (0, 0)
     end = (7, 6)
 
-    path = astar(maze, start, end)
+    path = astatr(maze, start, end)
     print(path)
 
 
