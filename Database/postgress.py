@@ -13,4 +13,6 @@ print(query_results)
 cur.close()
 conn.close()
 
-#//TODO CU
+
+#//TODO Insert
+#//TODO Update, Delete
