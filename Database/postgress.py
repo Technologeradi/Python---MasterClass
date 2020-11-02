@@ -2,7 +2,12 @@
 import psycopg2 as pg
 
 #%%
-conn = pg.connect(host="localhost", port = 5432, database="helloworld", user="postgres", password="root")
+conn = pg.connect(
+    host="localhost", 
+    port = 5432, 
+    database="helloworld", 
+    user="postgres", 
+    password="root")
 
 cur = conn.cursor()
 
