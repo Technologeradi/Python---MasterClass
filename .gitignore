@@ -620,3 +620,5 @@ $RECYCLE.BIN/
 rough.py
 
 test.tex
+ 
+*.ini
