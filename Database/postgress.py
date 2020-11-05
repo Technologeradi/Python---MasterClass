@@ -1,21 +1,7 @@
 #%%
 import psycopg2 as pg
-
-#%%
-
-
-cur = conn.cursor()
-
-cur.execute("""SELECT * FROM world""")
-query_results = cur.fetchall()
-print(query_results)
-
-cur.close()
-conn.close()
-
-#%%
 from configparser import ConfigParser
-
+#%%
 def config(filename='database,ini', section='postgresql'):
     parser =ConfigParser()
     parser.read(filename)
