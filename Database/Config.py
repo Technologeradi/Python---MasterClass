@@ -16,7 +16,4 @@ def config(filename='database,ini', section='postgresql'):
             raise Exception('Section {0} not found in the {1}'.format(section, filename))
 
         return db
-#//TODO Insert
-#//TODO Update, Delete
 
-# %%
