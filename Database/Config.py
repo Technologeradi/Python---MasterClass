@@ -2,8 +2,8 @@
 import psycopg2 as pg
 from configparser import ConfigParser
 #%%
-def config(filename='database,ini', section='postgresql'):
-    parser =ConfigParser()
+def config(filename='database.ini', section='postgresql'):
+    parser = ConfigParser()
     parser.read(filename)
 
     db = {}
@@ -14,6 +14,8 @@ def config(filename='database,ini', section='postgresql'):
             db[param[0]] = param[1]
         else:
             raise Exception('Section {0} not found in the {1}'.format(section, filename))
-
+        print(params)    
         return db
-
+        
+    
+    
