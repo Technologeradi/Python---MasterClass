@@ -1,21 +1,13 @@
-import psycopg2
+import psycopg2 as pg
 from Config import config
-
 def connect():
-    """ Connect to the PostgreSQL database server """
-    conn = psycopg2.connect("dbname=helloworld user=postgres password=root")
+    conn = None
     try:
-        # read connection parameters
         params = config()
-
-        # connect to the PostgreSQL server
-        print('Connecting to the PostgreSQL database...')
-        conn = psycopg2.connect("dbname=helloworld user=postgres password=root2")
-		
-        # create a cursor
+        print('Connecting to the posgress')
+        conn = pg.connect(**params)
         cur = conn.cursor()
-        
-	# execute a statement
+
         print('PostgreSQL database version:')
         cur.execute('SELECT version()')
 
@@ -25,9 +17,15 @@ def connect():
        
 	# close the communication with the PostgreSQL
         cur.close()
-    except (Exception, psycopg2.DatabaseError) as error:
+    except (Exception, pg.DatabaseError) as error:
         print(error)
     finally:
         if conn is not None:
             conn.close()
             print('Database connection closed.')
+
+
+if __name__ == '__main__':
+    connect()
+         
+#//TODO Debug the Connection
